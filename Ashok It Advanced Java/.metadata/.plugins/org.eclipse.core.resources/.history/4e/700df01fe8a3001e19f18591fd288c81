@@ -1,0 +1,16 @@
+package in.ashokit;
+
+public class BookStore {
+	public static void main(String[] args) {
+		
+		BookStore b = new BookStore();
+		int c = b.sum(10, 20);
+		System.out.println(c);
+
+	}
+
+	public int sum(int a, int b) {
+		int sum = a + b;
+		return sum;
+	}
+}

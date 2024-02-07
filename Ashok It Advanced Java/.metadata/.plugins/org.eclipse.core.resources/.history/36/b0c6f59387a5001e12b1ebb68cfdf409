@@ -1,0 +1,70 @@
+package in.ashokit.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import in.ashokit.dto.UserDto;
+import in.ashokit.util.ConnectionFactory;
+
+public class UserDao {
+
+	private static final String INSERT_SQL = "INSERT INTO user_tbl (user_name, user_email, user_phno) VALUES (?, ?, ?)";
+
+	private static final String SELECT_SQL = "SELECT * FROM USER_TBL";
+
+	public boolean saveUser(UserDto userDto) {
+
+		boolean isSaved = false;
+		try {
+			Connection con = ConnectionFactory.getConnection();
+			PreparedStatement pstmt = con.prepareStatement(INSERT_SQL);
+
+			pstmt.setString(1, userDto.getUserName());
+			pstmt.setString(2, userDto.getUserEmail());
+			pstmt.setLong(3, userDto.getUserPhno());
+
+			int count = pstmt.executeUpdate();
+
+			if (count > 0) {
+				isSaved = true;
+			}
+			isSaved = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return isSaved;
+	}
+
+	public List<UserDto> getUsers() {
+
+		List<UserDto> users = new ArrayList<>();
+		try {
+
+			Connection con = ConnectionFactory.getConnection();
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(SELECT_SQL);
+			
+			while(rs.next()) {
+				UserDto user = new UserDto();
+				user.setUserId(rs.getInt("user_id"));
+				user.setUserName(rs.getString("user_name"));
+				user.setUserEmail(rs.getString("user_email"));
+				user.setUserPhno(rs.getLong("user_phno"));
+					
+				// adding each user to collection
+				
+				users.add(user);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return users;
+
+	}
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<metacharset"ISO-8859-1">
+<title>Your Page Title</title>
+</head>
+<body>
+	<form action="bookServlet" method="post">
+		BOOK ID :<input type="number" name="bookId" /> <br/>
+		BOOK NAME :<input type="text" name="bookName" /> <br/>
+		BOOK PRICE :<input type="number" name="bookPrice" /><br/> 
+		
+		<input type="submit" value="sumbit" />
+
+	</form>
+</body>
+</html>

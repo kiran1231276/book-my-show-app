@@ -1,0 +1,9 @@
+package in.ashokit;
+
+public class InsertBook {
+	public static void main(String[] args) throws Exception {
+
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		
+	}
+}

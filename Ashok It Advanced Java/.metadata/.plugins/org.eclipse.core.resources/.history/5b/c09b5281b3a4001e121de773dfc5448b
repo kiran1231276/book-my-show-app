@@ -1,0 +1,11 @@
+package in.ashokit.util;
+
+import java.sql.Connection;
+import com.zaxxer.hikari.HikariConfig;
+
+public class ConnectionFactory {
+	public Connection getConnection() {
+
+		HikariConfig config = new HikariConfig();
+	}
+}

@@ -1,0 +1,9 @@
+127.0.0.1 - - [30/Dec/2023:09:05:16 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [30/Dec/2023:09:05:19 +0530] "GET /EmpProjectApp/ HTTP/1.1" 200 1923
+0:0:0:0:0:0:0:1 - - [30/Dec/2023:09:05:19 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [30/Dec/2023:09:06:07 +0530] "POST /EmpProjectApp/insert HTTP/1.1" 200 1939
+0:0:0:0:0:0:0:1 - - [30/Dec/2023:09:06:20 +0530] "GET /EmpProjectApp/emps.jsp HTTP/1.1" 200 2098
+0:0:0:0:0:0:0:1 - - [30/Dec/2023:09:06:37 +0530] "POST /EmpProjectApp/select HTTP/1.1" 200 4272
+0:0:0:0:0:0:0:1 - - [30/Dec/2023:09:06:47 +0530] "POST /EmpProjectApp/select HTTP/1.1" 200 2098
+0:0:0:0:0:0:0:1 - - [30/Dec/2023:09:06:51 +0530] "POST /EmpProjectApp/select HTTP/1.1" 200 2098
+0:0:0:0:0:0:0:1 - - [30/Dec/2023:09:06:55 +0530] "POST /EmpProjectApp/select HTTP/1.1" 200 4272

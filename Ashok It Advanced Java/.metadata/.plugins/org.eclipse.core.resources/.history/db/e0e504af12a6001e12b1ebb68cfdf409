@@ -1,0 +1,38 @@
+package java.in.ashokit.servlet;
+
+import java.in.ashokit.dao.EmpDao;
+import java.in.ashokit.dto.EmpDto;
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/insert")
+public class EmpServlet extends HttpServlet {
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String gender = request.getParameter("gender");
+        String dept = request.getParameter("dept");
+        String exp = request.getParameter("exp");
+
+        EmpDto empDto = new EmpDto();
+        empDto.setEmpName(name);
+        empDto.setEmpEmail(email);
+        empDto.setEmpGender(gender);
+        empDto.setEmpDept(dept);
+        empDto.setEmpExp(Integer.parseInt(exp));
+
+        EmpDao dao = new EmpDao();
+        boolean isSaved = dao.saveEmp(empDto);
+
+        String msg = (isSaved) ? "Emp Saved" : "Emp not saved";
+        request.setAttribute("msg", msg);
+        request.getRequestDispatcher("/index.jsp").forward(request, response);
+    }
+}

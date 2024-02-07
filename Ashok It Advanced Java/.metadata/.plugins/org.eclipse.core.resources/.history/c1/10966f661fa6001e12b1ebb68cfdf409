@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Search Employee</title>
+</head>
+<body>
+    <form action="Select" method="POST">
+        <table>
+            <tr>
+                <td>Emp Gender</td>
+                <td>
+                    <select name="gender">
+                        <option value="">-Select-</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Emp Department</td>
+                <td>
+                    <select name="dept">
+                        <option value="">-Select-</option>
+                        <option value="development">Development</option>
+                        <option value="testing">Testing</option>
+                        <option value="db">Database</option>
+                        <option value="ops">Operations</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Emp Exp</td>
+                <td>
+                    <select name="exp">
+                        <option value="">-Select-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Search"></td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+package java.in.ashokit.dao;
+
+import java.in.ashokit.dto.EmpDto;
+import java.in.ashokit.util.ConnectionFactory;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class EmpDao {
+
+    private static final String INSERT_SQL = "INSERT INTO emp_table (emp_name, emp_email, emp_gender, emp_dept, emp_exp) VALUES (?, ?, ?, ?, ?)";
+
+    public boolean saveEmp(EmpDto empDto) {
+        int count = 0;
+        try {
+            Connection con = ConnectionFactory.getConnection();
+            PreparedStatement pstmt = con.prepareStatement(INSERT_SQL);
+
+            pstmt.setString(1, empDto.getEmpName());
+            pstmt.setString(2, empDto.getEmpEmail());
+            pstmt.setString(3, empDto.getEmpGender());
+            pstmt.setString(4, empDto.getEmpDept());
+            pstmt.setInt(5, empDto.getEmpExp());
+
+            count = pstmt.executeUpdate();
+            con.close(); // Close connection after use to avoid resource leaks
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return count > 0;
+    }
+}

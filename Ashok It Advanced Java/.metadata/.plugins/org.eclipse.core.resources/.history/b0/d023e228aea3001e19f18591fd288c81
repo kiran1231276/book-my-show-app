@@ -1,0 +1,16 @@
+package in.ashokit;
+
+public interface InsertsBook {
+	
+	private static final String DB_URL = "jdbc:mysql://localhost:3306/myshop";
+
+	private static final String DB_UNAME = "root";
+
+	private static final String DB_PWD = "Pass@123";
+
+	private static final String INSERT_SQL = "INSERT INTO BOOKS VALUES(?,?,?";
+	
+	public static void main(String[] args) {
+		
+	}
+}

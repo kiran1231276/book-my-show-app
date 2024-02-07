@@ -1,0 +1,68 @@
+package in.ashokit.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import in.ashokit.dao.UserDao;
+import in.ashokit.dto.UserDto;
+
+
+@WebServlet("/user")
+public class UserServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	
+		// capture form data
+		String name = req.getParameter("name");
+		String email = req.getParameter("email");
+		String phno = req.getParameter("phno");
+		
+		//set form data to userdto object for transfer
+		UserDto userDto = new UserDto();
+		userDto.setUserName(name);
+		userDto.setUserEmail(email);
+		userDto.setUserPhno(Long.parseLong(phno));
+		
+		//call dao method
+		UserDao dao = new UserDao();
+		boolean isSaved = dao.saveUser(userDto);
+		
+		//msg displayed on saved page
+		String msg = null;
+		
+		if(isSaved) {
+			msg = "user Saved";
+		}else {
+			msg = "user not saved";
+		}
+		
+		req.setAttribute("msg", msg);
+		
+		req.getRequestDispatcher("/index.jsp").forward(req, resp);
+	}
+	
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.doPost(req, resp);
+	}
+	
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

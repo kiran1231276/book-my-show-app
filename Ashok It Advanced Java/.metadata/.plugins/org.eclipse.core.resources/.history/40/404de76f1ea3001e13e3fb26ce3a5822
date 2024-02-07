@@ -1,0 +1,25 @@
+package in.ashokit;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class InsertBook {
+
+	private static final String DB_URL = "jdbc:mysql://localhost:3306/myshop";
+
+	private static final String DB_UNAME = "root";
+
+	private static final String DB_PWD = "Pass@123";
+
+	public static void main(String[] args) throws Exception {
+
+		// Load driver
+		Class.forName("com.mysql.cj.jdbc.Driver");
+
+		// Get Db connection
+
+		Connection con= DriverManager.getConnection(DB_URL,DB_UNAME,DB_PWD);
+		System.out.println(con);
+
+	}
+}
