@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="03_BookMyShow_ShowtimeService" />
+        <module name="03_BookMyShow_CinemaHallService" />
+        <module name="03_BookMyShow_TicketService" />
+        <module name="03_BookMyShow_User (2)" />
+        <module name="03_BookMyShow_PaymentService" />
+        <module name="03_BookMyShow_ApiGatewayService" />
+        <module name="03_BookMyShow_MoviesService" />
+        <module name="03_BookMyShow_BookingService" />
+        <module name="03_BookMyShow_ServiceRegistry" />
+        <module name="03_BookMyShow_User (1)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="03_BookMyShow_FoodService" target="17" />
+      <module name="03_BookMyShow_User" target="17" />
+      <module name="Microservice-01-ApiGateway" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="03_BookMyShow_ApiGatewayService" options="-parameters" />
+      <module name="03_BookMyShow_BookingService" options="-parameters" />
+      <module name="03_BookMyShow_CinemaHallService" options="-parameters" />
+      <module name="03_BookMyShow_FoodService" options="-parameters" />
+      <module name="03_BookMyShow_MoviesService" options="-parameters" />
+      <module name="03_BookMyShow_PaymentService" options="-parameters" />
+      <module name="03_BookMyShow_ServiceRegistry" options="-parameters" />
+      <module name="03_BookMyShow_ShowtimeService" options="-parameters" />
+      <module name="03_BookMyShow_TicketService" options="-parameters" />
+      <module name="03_BookMyShow_User" options="-parameters" />
+      <module name="03_BookMyShow_User (1)" options="" />
+      <module name="03_BookMyShow_User (2)" options="" />
+      <module name="Microservice-01-ApiGateway" options="-parameters" />
+    </option>
+  </component>
+</project>

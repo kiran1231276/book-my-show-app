@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/03_BookMyShow_MoviesService/pom.xml" />
+        <option value="$PROJECT_DIR$/03_BookMyShow_BookingService/pom.xml" />
+        <option value="$PROJECT_DIR$/03_BookMyShow_ServiceRegistry/pom.xml" />
+        <option value="$PROJECT_DIR$/03_BookMyShow_ShowtimeService/pom.xml" />
+        <option value="$PROJECT_DIR$/03_BookMyShow_CinemaHallService/pom.xml" />
+        <option value="$PROJECT_DIR$/../03_BookMyShow_TicketService/pom.xml" />
+        <option value="$PROJECT_DIR$/03_BookMyShow_TicketService/pom.xml" />
+        <option value="$PROJECT_DIR$/03_BookMyShow_PaymentService/pom.xml" />
+        <option value="$PROJECT_DIR$/../03_BookMyShow_ApiGatewayService/pom.xml" />
+        <option value="$PROJECT_DIR$/03_BookMyShow_ApiGatewayService/pom.xml" />
+        <option value="$PROJECT_DIR$/03_BookMyShow_FoodService/pom.xml" />
+        <option value="$PROJECT_DIR$/03_BookMyShow_UserService/pom.xml" />
+        <option value="$USER_HOME$/OneDrive/Desktop/03_BookMyShow_FoodService/pom.xml" />
+        <option value="$USER_HOME$/OneDrive/Desktop/03_BookMyShow_UserService/pom.xml" />
+      </list>
+    </option>
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
