@@ -13,10 +13,10 @@ public class AnagramString {
         Arrays.sort(b);
 
         if(Arrays.equals(a, b)){
-            System.out.println("Anagram");
+            System.out.println("it is Anagram");
         }
         else{
-            System.out.println("Not Anagram");
+            System.out.println("it is Not Anagram");
         }
     }
 }
