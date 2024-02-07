@@ -1,0 +1,73 @@
+# Server configuration
+server:
+  port: 8084
+
+# Data Source Properties
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/bookmyshow
+    username: root
+    password: Pass@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # Application name for Eureka registration
+
+  application:
+    name: ShowTime-Service
+
+  # To Print Queries on Console
+  jpa:
+    show-sql: true
+
+    # To Create Table Dynamically
+    hibernate:
+      ddl-auto: update
+
+    open-in-view: false
+
+# Eureka server config
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    metadata-map:
+      foo: bar
+
+# Actuator Health Check
+management:
+  endpoint:
+    health:
+      show-details: always
+
+  # Disable Eureka Client Health check (optional, depending on your needs)
+
+  client:
+    health check:
+      enabled: false
+
+
+
+
+
+
+#  cloud:
+#    config:
+#      enabled: false
+#
+#
+#
+#feign:
+#  client:
+#    config:
+#      default:
+#        loggerLevel: full  # Enable Feign logging for debugging
+#  scan:
+#    base-packages: com.example.ShowTimeService.client
+
